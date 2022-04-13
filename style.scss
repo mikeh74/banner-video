@@ -58,7 +58,34 @@ body {
 
 .video-wrapper {
   position:relative;
-  height: 50vh;
+  height: 100vh;
+}
+
+.video-wrapper.ar-16-9 {
+  height: auto;
+}
+
+.ar-16-9 {
+  padding-bottom: 56.25%;
+}
+
+@supports(aspect-ratio: 16/9) {
+  .ar-16-9 {
+    aspect-ratio: 16/9;
+    padding-bottom: 0;
+  }
+}
+
+.text-wrapper {
+  color: white;
+  background-color: black;
+  opacity: 0.6;
+  z-index: 100;
+  padding: 1.5rem;
+  position: absolute;
+  width: 60%;
+  top: 5%;
+  left: 5%;
 }
 
 .video {

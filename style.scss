@@ -1,0 +1,91 @@
+$blue: #77b4c7;
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.menu-top {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.menu-top .container, .menu-top--items {
+  display: flex;
+  justify-content: space-between;  
+}
+
+.menu-top .container {
+  margin:auto;
+  max-width: 1200px;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.menu-top--items div {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  background-color: $blue;
+  padding: .5rem
+}
+
+.menu-bottom {
+  padding: 1rem;
+  background-color: $blue;
+
+}
+
+.menu-bottom .container {
+  margin: auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  font-size: .9rem;
+  font-weight: bold;
+}
+
+.menu-bottom .container div {
+  margin: 0 .5rem;
+}
+
+.menu-bottom .container div:first-of-type,
+.menu-bottom .container div:last-of-type {
+  margin: 0;
+}
+
+.video-wrapper {
+  position:relative;
+  height: 50vh;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: rgb(34, 34, 34);
+}
+
+.play-wrapper {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-button {
+  padding: 1rem;
+  font-size: 1.5rem;
+}

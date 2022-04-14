@@ -45,6 +45,7 @@ body {
   justify-content: space-between;
   font-size: .9rem;
   font-weight: bold;
+  overflow: auto;
 }
 
 .menu-bottom .container div {
@@ -59,21 +60,6 @@ body {
 .video-wrapper {
   position:relative;
   height: 100vh;
-}
-
-.video-wrapper.ar-16-9 {
-  height: auto;
-}
-
-.ar-16-9 {
-  padding-bottom: 56.25%;
-}
-
-@supports(aspect-ratio: 16/9) {
-  .ar-16-9 {
-    aspect-ratio: 16/9;
-    padding-bottom: 0;
-  }
 }
 
 .text-wrapper {
@@ -115,4 +101,28 @@ body {
 .play-button {
   padding: 1rem;
   font-size: 1.5rem;
+}
+
+
+.video-wrapper.ar-16-9 {
+  height: auto;
+}
+
+.ar-16-9 {
+  padding-bottom: 56.25%;
+}
+
+@supports(aspect-ratio: 16/9) {
+  .ar-16-9 {
+    aspect-ratio: 16/9;
+    padding-bottom: 0;
+  }
+}
+
+$heights: 25, 33, 50, 66, 75, 100;
+
+@each $height in $heights {
+  .vh-#{$height} {
+    height: #{$height}vh !important;
+  }
 }
